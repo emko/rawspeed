@@ -278,8 +278,8 @@ void ArwDecoder::DecodeLJpeg(const TiffIFD* raw) const {
     ThrowRDE("Unexpected bits per pixel: %u", bitPerPixel);
   }
 
-  if (width == 0 || height == 0 || height % 2 != 0 || width > 9600 ||
-      height > 6376)
+  if (width == 0 || height == 0 || height % 2 != 0 || width > 9728 ||
+      height > 6656)
     ThrowRDE("Unexpected image dimensions found: (%u; %u)", width, height);
 
   mRaw->dim = iPoint2D(width, height);
